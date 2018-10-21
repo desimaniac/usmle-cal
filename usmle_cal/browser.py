@@ -11,36 +11,6 @@ from selenium.webdriver.support.select import Select
 from selenium.common.exceptions import NoSuchElementException
 
 
-class ScheduleLinkFinder(object):
-    def __call__(self, driver):
-        try:
-            available_dates_links = self.driver.find_elements_by_link_text(
-                "View Available Test Dates")
-            if available_dates_links:
-                return True
-        except:
-            return False
-
-
-class ScheduleButtonFinder(object):
-    def __call__(self, driver):
-        exam_buttons = driver.find_elements_by_css_selector(
-            "button.btn.btn-sm.btn-block.btn-primary")
-        if exam_buttons:
-            return True
-        return False
-
-
-class SkipButtonFinder(object):
-    def __call__(self, driver):
-        try:
-            skip_button = driver.find_element_by_name('btnSkip').click()
-            if skip_button:
-                return True
-        except:
-            return False
-
-
 class USMLEBrowser(object):
     def __enter__(self):
         chrome_options = Options()
