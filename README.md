@@ -30,6 +30,9 @@ pip install -r requirements.txt
 
 ## To Run
 
+The below cd could be avoided by adding the location of the chromedriver install to your PATH, but for ease:
+
 ```bash
-python usmle_cal/browser.py
+cd usmle_cal 
+python browser.py
 ```
